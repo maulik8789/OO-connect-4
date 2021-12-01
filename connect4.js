@@ -242,6 +242,7 @@ function chooseOppo(select) {
     //alert('Player#2 is: ' + select.options[select.selectedIndex].text);
     start.addEventListener('click', function(e){
       e.preventDefault();
+      player = '';
       let newGame = document.querySelector('#board');
       newGame.innerHTML = '';
       new Game(6, 7);
@@ -255,12 +256,16 @@ function chooseOppo(select) {
       let newGame = document.querySelector('#board');
       newGame.innerHTML = '';
       new Game(6, 7);
-  }
+    });
+  }  
   else if(select.options[select.selectedIndex].text == 'Choose'){
     alert('Please choose an opponent!');
+    start.addEventListener('click', function(e){
+      e.preventDefault();
+      player = '';
+      let newGame = document.querySelector('#board');
+      newGame.innerHTML = '';
+    });  
   }
   
-}
-if(select.options[select.selectedIndex].text == 'Human'){
-
 }
