@@ -232,24 +232,35 @@ class Game{
 
 
 
+/////Start new Game
+let start = document.querySelector('#start');
+
 ///// Choose Opponent
 var player = '';
 function chooseOppo(select) {
   if(select.options[select.selectedIndex].text == 'Human'){
-    //alert('Player#2 is: ' + select.options[select.selectedIndex].text);    
+    //alert('Player#2 is: ' + select.options[select.selectedIndex].text);
+    start.addEventListener('click', function(e){
+      e.preventDefault();
+      let newGame = document.querySelector('#board');
+      newGame.innerHTML = '';
+      new Game(6, 7);
+    })    
   }
   else if(select.options[select.selectedIndex].text == 'Computer'){
     //alert('Player#2 is: ' + select.options[select.selectedIndex].text);
-    player = 'Computer';
+    start.addEventListener('click', function(e){
+      e.preventDefault();
+      player = 'Computer';
+      let newGame = document.querySelector('#board');
+      newGame.innerHTML = '';
+      new Game(6, 7);
+  }
+  else if(select.options[select.selectedIndex].text == 'Choose'){
+    alert('Please choose an opponent!');
   }
   
 }
+if(select.options[select.selectedIndex].text == 'Human'){
 
-/////Start new Game
-let start = document.querySelector('#start');
-start.addEventListener('click', function(e){
-  e.preventDefault();
-  let newGame = document.querySelector('#board');
-  newGame.innerHTML = '';
-  new Game(6, 7);
-})
+}
