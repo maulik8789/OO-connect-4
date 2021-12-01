@@ -3,13 +3,21 @@
   <title>Connect 4</title>
   <link href="connect4.css" rel="stylesheet">
 </head>
-<body style="background-color: black;">
-  <h1 style="color: beige; margin-left: 41%; margin-top: 2%; font-size:50px;">PLAY Connect4!</h1>
-<div id = "playerNum" class="display1">Player #1 Turn</div>
+<body>
+  <label for = 'oppo'>Choose Opponent</label>
+  <select id="oppo" onchange="chooseOppo(this)">
+    <option value="0">Choose</option>
+    <option value="1">Human</option>
+    <option value="2">Computer</option>
+</select>
+<button class = 'btn' id="start">Start the Game</button>
 <div id="game">
-  <table id="board"></table>
+  <table id="board">
+      <h1 class= "head">Connect-4-OO</h1>
+      <h2 id="curPlayer">Player#1 Turn</h2>
+  </table>
 </div>
-<h3><button  id="reset" style="margin-left: 51%; padding: 15px 32px;">RESET</button></h3>
+
 <script src="connect4.js"></script>
 
 </body>
