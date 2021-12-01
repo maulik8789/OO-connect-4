@@ -1,0 +1,91 @@
+/* game board table */
+
+#board {
+  margin-top: 10px;
+  margin-left: 40%;
+}
+
+#playerNum{
+  margin-top: 10px;
+  margin-left: 40%;
+  font-size: xx-large;
+}
+
+.display1{
+ color: orange;
+ cursor: grab;
+}
+.display2{
+  color: blue;
+  cursor: crosshair;
+  font-style: italic;
+}
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #666;
+  border-radius: 10%;
+  background-color:indianred
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  /* (DONE)TODO: make into circles */
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* (DONE)TODO: make pieces red/blue,  depending on player 1/2 piece */
+.p1{
+  background-color:orange;
+  position: relative;
+  animation-name: drop;
+  animation-duration: 1s;
+}
+
+.p2{
+  background-color: blue;
+  position: relative;
+  animation-name: drop;
+  animation-duration: 1s;
+}
+
+@keyframes drop{
+  0%   {top: -100% }
+  10%  {top: 0% }
+  20%  {top: -80% }
+  30%  {top: 0% }
+  40%  {top: -60% }
+  50%  {top: 0% }
+  60%  {top: -40% }
+  70%  {top: 0% }
+  80%  {top: -20% }
+  100%  {top:0px}
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top1 td {
+  background-color: green;
+}
+
+#column-top1 td:hover {
+  background-color: orange;
+  border-radius: 50%;
+  cursor: grab;
+}
+
+#column-top2 td {
+  background-color: green;
+}
+
+#column-top2 td:hover {
+  background-color: blue;
+  border-radius: 50%;
+  cursor: crosshair;
+}
