@@ -243,6 +243,7 @@ function chooseOppo(select) {
     start.addEventListener('click', function(e){
       e.preventDefault();
       player = '';
+      document.querySelector('#curPlayer').textContent = 'Player#1 Turn';
       let newGame = document.querySelector('#board');
       newGame.innerHTML = '';
       new Game(6, 7);
@@ -253,6 +254,7 @@ function chooseOppo(select) {
     start.addEventListener('click', function(e){
       e.preventDefault();
       player = 'Computer';
+      document.querySelector('#curPlayer').textContent = 'Player#1 Turn';
       let newGame = document.querySelector('#board');
       newGame.innerHTML = '';
       new Game(6, 7);
@@ -263,6 +265,7 @@ function chooseOppo(select) {
     start.addEventListener('click', function(e){
       e.preventDefault();
       player = '';
+      document.querySelector('#curPlayer').textContent = 'Player#1 Turn';
       let newGame = document.querySelector('#board');
       newGame.innerHTML = '';
     });  
